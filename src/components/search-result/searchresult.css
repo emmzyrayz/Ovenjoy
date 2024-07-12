@@ -1,0 +1,13 @@
+/* src/components/pages/SearchResults.css */
+.search-results {
+    padding: 20px;
+}
+
+.search-results p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.search-results .item {
+    margin-bottom: 20px;
+}

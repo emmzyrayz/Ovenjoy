@@ -1,0 +1,323 @@
+/* Container styling */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(161px, 1fr));
+    gap: 40px;
+    padding: 30px 10px;
+    margin-bottom: 40px;
+}
+
+/* Item styling */
+.item {
+    display: block;
+    background: var(--ghost-white);
+    border-radius: 20px;
+    max-height: 210px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.item-img {
+    display: grid;
+    position: relative;
+    background: white;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
+    top: -45px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.item-img>img {
+    background: none;
+    min-width: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+}
+
+.item h3 {
+    font-size: var(--fs-14);
+    font-weight: var(--fw-800);
+    line-height: var(--lh-19);
+    color: var(--font-color-lite);
+    transform: translateY(-30px);
+    text-align: left;
+}
+
+.item p {
+    font-size: var(--fs-10);
+    line-height: var(--lh-13);
+    font-weight: var(--fw-300);
+    color: var(--font-color-lite);
+    transform: translateY(-30px);
+}
+
+.price {
+    font-size: var(--fs-15);
+    font-weight: var(--fw-800);
+    line-height: var(--lh-20);
+    text-align: left;
+    transform: translateY(-30px);
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    /* position: absolute; */
+    min-width: 100%;
+    transform: translateY(-20px);
+}
+
+.add,
+.heart {
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.add:hover,
+.heart:hover {
+    opacity: 0.8;
+}
+
+.icon-color {
+    color: var(--orange-color) !important;
+}
+
+.icon-color-active {
+    color: var(--light-color);
+}
+
+.item-link {
+    text-decoration: none;
+    /* Remove underline */
+    color: inherit;
+    /* Inherit text color from parent */
+}
+
+.item-link:hover {
+    text-decoration: none;
+    /* Remove underline on hover */
+    color: inherit;
+    /* Inherit text color on hover */
+}
+
+
+/* ?Product Detail */
+/* src/components/prod-det/ProductDetail.css */
+.product-detail {
+    background-color: var(--dark-color);
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: 100%;
+}
+
+.back-button {
+    align-self: flex-start;
+    font-size: 24px;
+    color: #fff;
+    padding-left: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    /* To position the pseudo-elements relative to the button */
+    overflow: hidden;
+    /* To prevent overflow */
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+.back-button .fa-arrow-left {
+    transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+    /* Animates transform and color */
+}
+
+.back-button:hover .fa-arrow-left {
+    transform: translateX(-5px);
+    /* Example of animation: move left by 5px */
+    color: #ff6000;
+    /* Change color on hover */
+}
+
+.product-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    max-height: 60vh;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.product-info-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+    padding: 5px 20px;
+}
+
+h1 {
+    font-size: var(--fs-32);
+    font-weight: var(--fw-800);
+    line-height: var(--lh-43);
+    color: var(--font-color-light);
+}
+
+.favorite-button {
+    position: relative;
+    align-self: flex-end;
+    width: 45px;
+    height: 45px;
+    background: var(--font-color-light);
+    border: none;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 1000px;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--orange-color);
+}
+
+.favorite-button .fa-heart{
+    background: transparent;
+}
+
+.product-info > p {
+    display: flex;
+    font-weight: var(--fw-300);
+    font-size: var(--fs-18);
+    line-height: var(--lh-24);
+    color: var(--font-color-light);
+    text-align: center;
+    justify-content: center;
+    padding: 2px 10px;
+    min-width: 100%;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0px 10px;
+}
+
+.product-meta > .quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 82.07px;
+    height: 57.93px;
+}
+
+.faint-head {
+    font-weight: var(--fw-600);
+    font-size: var(--fs-16);
+    line-height: var(--lh-21);
+    color: var(--font-color-wfaint);
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.quantity-control > span,
+.ready-in > span,
+.distance > span {
+    margin: 0 10px;
+    font-size: var(--fs-24);
+    font-weight: var(--fw-700);
+    line-height: var(--lh-32);
+}
+
+.ready-in,
+.distance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-info-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 10px;
+    bottom: 5px;
+}
+
+.total-price {
+    margin: 10px 0;
+    height: 74.07px;
+    width: 190.14px;
+}
+
+.total-price span {
+    font-weight: var(--fw-700);
+    font-size: var(--fs-36);
+    line-height: var(--lh-49);
+    color: var(--font-color-light);
+}
+
+.add-to-cart-button {
+    background-color: #FF6000;
+    color: #fff;
+    padding: 1px 5px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: var(--fs-16);
+    font-weight: var(--fw-600);
+    line-height: var(--lh-21);
+    gap: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-button svg {
+    /* margin-left: 10px; */
+    width: 24px;
+    height: 24px;
+}

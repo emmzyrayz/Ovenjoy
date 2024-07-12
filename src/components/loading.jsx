@@ -1,0 +1,40 @@
+import React, {useEffect, useState} from "react";
+import "../App.css"; // Make sure to create and link a CSS file for styling
+import Logo from "../assets/img/logo.svg"
+
+const LoadingScreen = ({onExploreClick}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => {
+      setShowButton(true);
+    }, 3000); // Adjust the delay as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleButtonClick = () => {
+    setIsLoaded(true);
+    setTimeout(onExploreClick, 500); // Adjust the timeout to match the CSS transition duration
+  };
+
+  return (
+    <div className={`loading-screen ${isLoaded ? "loaded" : ""}`}>
+      <div className="content">
+        <img src={Logo} alt="OvenJoy Logo" />
+        <h1>Welcome to OvenJoy!</h1>
+        <p>
+          Embark on a delightful journey through the world of pastries. From
+          flaky croissants to creamy éclairs, OvenJoy brings the bakery to you.
+        </p>
+        {showButton && (
+          <button onClick={handleButtonClick}>Let's Explore</button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default LoadingScreen;

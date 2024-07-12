@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "imgSrc": "/src/assets/img/burger-Nirvana.png",
+    "title": "Burger Nirvana",
+    "description": "Experience burger perfection with our mouthwatering creations that combine the juiciest patties, freshest toppings, and artisanal buns. Each bite is a journey to burger bliss, where flavor and satisfaction meet in perfect harmony.",
+    "price": 26,
+    "readyTime": 20,
+    "distance": 1,
+    "quantity": 10
+  },
+  {
+    "id": 2,
+    "imgSrc": "/src/assets/img/cake delight.png",
+    "title": "Cake Delights",
+    "description": "Indulge in elegant cakes, from layered creations.",
+    "price": 30,
+    "readyTime": 75,
+    "distance": 10,
+    "quantity": 3
+  },
+  {
+    "id": 3,
+    "imgSrc": "/src/assets/img/pie bliss.png",
+    "title": "Pie Bliss",
+    "description": "Sweet and savory pies that offer comforting flavors.",
+    "price": 29,
+    "readyTime": 40,
+    "distance": 9,
+    "quantity": 15
+  },
+  {
+    "id": 4,
+    "imgSrc": "/src/assets/img/cupcake.png",
+    "title": "Muffin Medley",
+    "description": "Explore a world of muffin flavors, from classic blueberry",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  },
+  {
+    "id": 5,
+    "imgSrc": "/src/assets/img/brown-cake.jpg",
+    "title": "Brown Cake",
+    "description": "Indulge in our rich and moist Brown Cake, a delightful treat perfect for any occasion. Made with the finest ingredients, this cake is sure to satisfy your sweet tooth.",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  },
+  {
+    "id": 6,
+    "imgSrc": "/src/assets/img/brown-rolls.jpg",
+    "title": "Brown Rolls",
+    "description": "Enjoy the wholesome goodness of our Brown Rolls, baked to perfection with a soft, fluffy interior and a crisp, golden crust. Ideal for sandwiches or as a side to your favorite meal.",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  },{
+    "id": 7,
+    "imgSrc": "/src/assets/img/long-bread.jpg",
+    "title": "Long Bread",
+    "description": "Our Long Bread is a bakery classic, with a chewy texture and a deliciously crunchy crust. Perfect for making hearty sandwiches or toasting with a spread of butter.",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  },{
+    "id": 8,
+    "imgSrc": "/src/assets/img/round-cookies.jpg",
+    "title": "Brown Cake",
+    "description": "Indulge in our rich and moist Brown Cake, a delightful treat perfect for any occasion. Made with the finest ingredients, this cake is sure to satisfy your sweet tooth.",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  },{
+    "id": 9,
+    "imgSrc": "/src/assets/img/brown-cake.jpg",
+    "title": "Round Cookies",
+    "description": "Treat yourself to our delectable Round Cookies, packed with flavor and baked to a perfect golden brown. These cookies are a delightful snack for any time of the day.",
+    "price": 55,
+    "readyTime": 60,
+    "distance": 22,
+    "quantity": 24
+  }
+]

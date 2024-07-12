@@ -1,0 +1,134 @@
+:root {
+    /* Colors */
+    --dark-color: #1c1c1c;
+    --orange-color: #FF6000;
+    --light-color: #D2CCCC;
+    --ghost-black: rgba(0, 0, 0, 0.3);
+    --ghost-white: #2C2C2C;
+    --ghost-orange: #ff62005d;
+
+    /* wireframe */
+    --wf-ghost-bwhite: #D9D9D9;
+    --wf-ghost-lwhite: #383A3C;
+    --wf-btn-color: #C9C1C1;
+
+    /* Typography */
+    --font-family: 'Open Sans', sans-serif;
+
+    /* Typographic Variables */
+    --font-color-light: #FFFFFF;
+    --font-color-lite: #F5F5F5;
+    --font-color-dark: #000000;
+    --font-color-wfaint: #7C7D8B;
+
+    /* font-size */
+    --fs-10: 10px;
+    --fs-14: 14px;
+    --fs-15: 15px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-24: 24px;
+    --fs-28: 28px;
+    --fs-32: 32px;
+    --fs-36: 36px;
+
+    /* font-weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    /* line-height */
+    --lh-13: 13.62px;
+    --lh-19: 19.07px;
+    --lh-20: 20.43px;
+    --lh-21: 21.79px;
+    --lh-24: 24.51px;
+    --lh-32: 32.68px;
+    --lh-43: 43.58px;
+    --lh-49: 49.03px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+body {
+    background: var(--dark-color);
+    color: var(--font-color-light);
+}
+
+img {
+    width: 100%;
+    /* or the desired width */
+    height: auto;
+    image-rendering: -moz-crisp-edges;
+    /* Firefox */
+    image-rendering: -o-crisp-edges;
+    /* Opera */
+    image-rendering: -webkit-optimize-contrast;
+    /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+/* Loading screen */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 105vh;
+    background-color: var(--orange-color);
+    color: var(--font-color-light);
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1500;
+    position: fixed;
+    overflow: hidden;
+}
+
+.loading-screen.loaded {
+    display: none;
+}
+
+.loading-screen .content img{
+    display: block;
+    position: relative;
+    height: 60vh;
+}
+
+.loading-screen .content {
+    max-width: 90%;
+}
+
+.loading-screen h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.loading-screen p {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.loading-screen button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #ff6000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.loading-screen button:hover {
+    background-color: #ddd;
+}
