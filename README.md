@@ -31,6 +31,7 @@ This project was brought to life through the collaborative efforts of:
 - **Developer**: Nnamdi Emmanuel Dike  
   - Twitter: [@okayinterrupt](https://www.x.com/okayinterrupt)
   - GitHub: [OvenJoy Repository](https://github.com/emmzyrayz/OvenJoy)
+  - Web Link: [OvenJoy Web](https://ovenjoybakery-656d8.web.app)
   
 - **UI/UX Designer**: Joseph Emmanuel  
   - Twitter: [@Atomthecreator](https://x.com/Atomthecreator)
