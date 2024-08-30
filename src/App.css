@@ -25,6 +25,7 @@
     --fs-8: 8px;
     --fs-10: 10px;
     --fs-12: 12px;
+    --fs-13: 13px;
     --fs-14: 14px;
     --fs-15: 15px;
     --fs-16: 16px;
@@ -32,6 +33,7 @@
     --fs-22: 22px;
     --fs-24: 24px;
     --fs-28: 28px;
+    --fs-30: 30px;
     --fs-32: 32px;
     --fs-36: 36px;
 
@@ -51,6 +53,32 @@
     --lh-32: 32.68px;
     --lh-43: 43.58px;
     --lh-49: 49.03px;
+
+    /* Letter Spacing */
+    --ls-normal: 0px;
+    --ls-wide: 0.5px;
+    --ls-wider: 1px;
+    --ls-tight: -0.5px;
+    --ls-tighter: -1px;
+
+    /* Word Spacing */
+    --ws-normal: 0px;
+    --ws-wide: 2px;
+    --ws-wider: 4px;
+    --ws-tight: -1px;
+    --ws-tighter: -2px;
+
+    /* Padding */
+    --pd-small: 4px;
+    --pd-medium: 8px;
+    --pd-large: 16px;
+    --pd-xlarge: 32px;
+
+    /* Margin */
+    --mg-small: 4px;
+    --mg-medium: 8px;
+    --mg-large: 16px;
+    --mg-xlarge: 32px;
 }
 
 * {

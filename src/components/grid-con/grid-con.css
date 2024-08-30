@@ -27,12 +27,13 @@
     min-height: 100%;
     max-width: 300px;
     text-align: center;
+    margin-bottom: 20px;
     padding: 0px 10px;
     padding-top: 30px;
     position: relative;
     gap: 5px;
     justify-content: space-between;
-    list-style: 5px !important;
+    /* list-style: 5px !important; */
 }
 
 .item-img {
@@ -73,12 +74,14 @@
 }
 
 .item p {
-    font-size: var(--fs-12) !important;
-    line-height: var(--lh-13);
+    position: relative;
+    font-size: var(--fs-14) !important;
+    /* line-height: var(--lh-13); */
     font-weight: var(--fw-300) !important;
     color: var(--font-color-lite);
     transform: translateY(-30px);
-    padding-bottom: 10px;
+    text-align: center;
+    /* padding: 10px 5px; */
 }
 
 .price {
