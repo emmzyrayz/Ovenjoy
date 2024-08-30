@@ -8,15 +8,19 @@
 }
 
 .fa-bars-staggered,
-.fa-xmark {
+.fa-xmark,
+.fa-magnifying-glass {
     height: 35px;
     width: 35px;
 }
 
-.fa-magnifying-glass {
-    width: 35px;
-    height: 35px;
+.fa-bars-staggered:hover,
+.fa-xmark:hover,
+.fa-magnifying-glass:hover {
+    color: var(--orange-color);
+    opacity: 0.5;
 }
+
 
 .logo-con {
     display: flex;
@@ -25,6 +29,14 @@
     justify-content: center;
     align-items: center;
     height: 50px;
+}
+
+.logo-con:hover {
+    color: var(--orange-color);
+}
+
+.logo-con:hover .logo-img img {
+    scale: 1.1;
 }
 
 .logo-con>.logo-img {

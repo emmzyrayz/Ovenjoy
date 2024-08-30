@@ -13,10 +13,14 @@ import {
   PiShoppingCart,
   PiShoppingCartFill,
 } from "react-icons/pi";
+import { useFavorite } from "../../context/favouriteContext";
+import { useCart } from "../../context/cartContext";
 
 const BottomNav = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const {favorites} = useFavorite();
+  const {cartItems} = useCart();
 
   return (
     <div className="bottom-nav">
@@ -28,24 +32,34 @@ const BottomNav = () => {
         )}
       </Link>
       <Link to="/liked" className="nav-icon">
-        <FontAwesomeIcon
-          icon={currentPath === "/liked" ? faHeart : farHeart}
-          className={currentPath === "/liked" ? "filled" : "regular"}
-        />
+        <div className="nav-icon-container">
+          <FontAwesomeIcon
+            icon={currentPath === "/liked" ? faHeart : farHeart}
+            className={currentPath === "/liked" ? "filled" : "regular"}
+          />
+          {favorites.length > 0 && (
+            <span className="badge">{favorites.length}</span>
+          )}
+        </div>
       </Link>
       <Link to="/cart" className="nav-icon">
-        {currentPath === "/cart" ? (
-          <PiShoppingCartFill className="filled" />
-        ) : (
-          <PiShoppingCart className="regular" />
-        )}
+        <div className="nav-icon-container">
+          {currentPath === "/cart" ? (
+            <PiShoppingCartFill className="filled" />
+          ) : (
+            <PiShoppingCart className="regular" />
+          )}
+          {cartItems.length > 0 && (
+            <span className="badge">{cartItems.length}</span>
+          )}
+        </div>
       </Link>
-      <Link to="/profile" className="nav-icon">
+      {/* <Link to="/profile" className="nav-icon">
         <FontAwesomeIcon
           icon={currentPath === "/profile" ? faUser : farUser}
           className={currentPath === "/profile" ? "filled" : "regular"}
         />
-      </Link>
+      </Link> */}
     </div>
   );
 };

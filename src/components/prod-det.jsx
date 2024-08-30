@@ -11,14 +11,13 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faHeart,
-  faArrowLeft,
   faMinusSquare,
   faSquarePlus as farSquarePlus,
 } from "@fortawesome/free-solid-svg-icons";
+import {BackButton} from "./buttons";
 
 const ProductDetail = () => {
   const {id} = useParams();
-  const navigate = useNavigate();
   const item = data.find((item) => item.id.toString() === id);
   const [quantity, setQuantity] = useState(1);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -41,9 +40,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail">
-      <button onClick={() => navigate(-1)} className="back-button">
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </button>
+      <BackButton />
 
       <img src={item.imgSrc} alt={item.title} className="product-image" />
 

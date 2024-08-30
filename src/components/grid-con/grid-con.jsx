@@ -5,17 +5,12 @@ import {Link} from "react-router-dom";
 import data from "../../assets/products/product.json";
 import "./grid-con.css";
 import "../../App.css";
-import burgerNirvana from "../../assets/img/burger-Nirvana.png";
-import cakeDelight from "../../assets/img/cake delight.png";
-import cupCake from "../../assets/img/cupcake.png";
-import pieBliss from "../../assets/img/pie bliss.png";
-import brownCake from "../../assets/img/brown-cake.jpg";
-import brownRolls from "../../assets/img/brown-rolls.jpg";
-import longBread from "../../assets/img/long-bread.jpg";
-import roundCookies from "../../assets/img/round-cookies.jpg";
+import { useImage } from "../../context/ImageContext";
 
 const GridCon = () => {
- const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
+  const {findImagePath} = useImage();
+  //  const [item, setItem] = useState([]);
 
   useEffect(() => {
     console.log("useEffect called");
@@ -24,16 +19,6 @@ const GridCon = () => {
     setItems(data);
   }, []);
 
-  const productImages = {
-    "Burger Nirvana": burgerNirvana,
-    "Cake Delights": cakeDelight,
-    "Pie Bliss": pieBliss,
-    "Muffin Medley": cupCake,
-    "Brown Cake": brownCake,
-    "Brown Rolls": brownRolls,
-    "Long Bread": longBread,
-    "Round Cookies": roundCookies,
-  };
 
   const productSum = {
     "Burger Nirvana": "Innovative pastries merging flavors and styles.",
@@ -42,6 +27,7 @@ const GridCon = () => {
     "Muffin Medley":
       "Explore a world of muffin flavors, from classic blueberry.",
     "Brown Cake": "Rich and moist Brown Cake, perfect for any sweet occasion.",
+    "Browwn Cake": "Rich and moist Brown Cake, perfect for any sweet occasion.",
     "Brown Rolls":
       "Soft and fluffy Brown Rolls with a golden crust, ideal for sandwiches or sides.",
     "Long Bread":
@@ -57,10 +43,11 @@ const GridCon = () => {
       {items.map((item) => (
         <Link key={item.id} to={`/item/${item.id}`} className="item-link">
           <ItemCard
-            imgSrc={productImages[item.title]}
+            imgSrc={findImagePath(item.imgSrc.split("/").pop())}
             title={item.title}
             description={productSum[item.title]}
             price={item.price}
+            product={item} // Pass the whole product object
           />
         </Link>
       ))}

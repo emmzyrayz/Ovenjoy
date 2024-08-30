@@ -1,28 +1,44 @@
 /* Container styling */
 .container {
+    @apply w-full;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(161px, 1fr));
-    gap: 40px;
+    gap: 20px;
     padding: 30px 10px;
     margin-bottom: 40px;
+    overflow: hidden;
+    scrollbar-width: 0 !important;
+}
+
+@media (min-width: 756px) {
+    .container {
+        min-width: 100%;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
 }
 
 /* Item styling */
 .item {
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: var(--ghost-white);
     border-radius: 20px;
-    max-height: 210px;
+    min-height: 100%;
+    max-width: 300px;
     text-align: center;
-    padding: 20px;
+    padding: 0px 10px;
+    padding-top: 30px;
     position: relative;
+    gap: 5px;
+    justify-content: space-between;
+    list-style: 5px !important;
 }
 
 .item-img {
-    display: grid;
+    display: flex;
     position: relative;
     background: white;
-    min-width: 100px;
     max-width: 100px;
     min-height: 100px;
     border-radius: 50%;
@@ -38,6 +54,7 @@
     background: none;
     min-width: 100px;
     max-width: 100px;
+    min-height: 100px;
     max-height: 100px;
     border-radius: 50%;
     object-fit: cover;
@@ -46,20 +63,22 @@
 }
 
 .item h3 {
-    font-size: var(--fs-14);
-    font-weight: var(--fw-800);
+    font-size: var(--fs-20) !important;
+    font-weight: var(--fw-800) !important;
     line-height: var(--lh-19);
     color: var(--font-color-lite);
     transform: translateY(-30px);
     text-align: left;
+    padding-bottom: 10px;
 }
 
 .item p {
-    font-size: var(--fs-10);
+    font-size: var(--fs-12) !important;
     line-height: var(--lh-13);
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-300) !important;
     color: var(--font-color-lite);
     transform: translateY(-30px);
+    padding-bottom: 10px;
 }
 
 .price {
@@ -98,6 +117,10 @@
 
 .icon-color-active {
     color: var(--light-color);
+}
+
+.icon-color-active:hover {
+    color: var(--orange-color);
 }
 
 .item-link {
@@ -206,11 +229,11 @@ h1 {
     color: var(--orange-color);
 }
 
-.favorite-button .fa-heart{
+.favorite-button .fa-heart {
     background: transparent;
 }
 
-.product-info > p {
+.product-info>p {
     display: flex;
     font-weight: var(--fw-300);
     font-size: var(--fs-18);
@@ -230,7 +253,7 @@ h1 {
     padding: 0px 10px;
 }
 
-.product-meta > .quantity {
+.product-meta>.quantity {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -260,9 +283,9 @@ h1 {
     cursor: pointer;
 }
 
-.quantity-control > span,
-.ready-in > span,
-.distance > span {
+.quantity-control>span,
+.ready-in>span,
+.distance>span {
     margin: 0 10px;
     font-size: var(--fs-24);
     font-weight: var(--fw-700);
@@ -276,7 +299,7 @@ h1 {
     align-items: center;
 }
 
-.product-info-bottom{
+.product-info-bottom {
     display: flex;
     flex-direction: row;
     justify-content: center;

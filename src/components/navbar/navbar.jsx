@@ -52,7 +52,7 @@ const NavBar = () => {
     return (
       <>
         <div className="navbar">
-          <FontAwesomeIcon icon={faBarsStaggered} />
+          {/* <FontAwesomeIcon icon={faBarsStaggered} /> */}
 
           <div className="logo-con">
             <div className="logo-img">
