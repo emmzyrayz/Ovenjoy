@@ -36,7 +36,7 @@ const Cart = () => {
             </h4>
           </div>
           <div className="col align-self-center text-white text-right">
-            3 items
+            {cartItems.length > 0 ? `${cartItems.length} items` : "No item"}
           </div>
         </div>
       </div>
